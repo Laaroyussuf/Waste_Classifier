@@ -40,4 +40,4 @@ Contributions to this project are welcome. If you find any issues or have sugges
 
 ## Acknowledgments
 
-- The waste sorting dataset used in this project is sourced from [https://www.kaggle.com/datasets/techsash/waste-classification-data].
+- The waste sorting dataset used in this project is sourced from ![https://www.kaggle.com/datasets/techsash/waste-classification-data].
