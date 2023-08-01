@@ -9,10 +9,7 @@ from keras.utils import img_to_array
 
 model = load_model('model_final.h5')
 
-def sort_waste(image):
-  if image is None:
-      return st.write("Please upload an image")
-    
+def sort_waste(image): 
   st.write("Image received successfully.")
   image = Image.open(image)
   image = np.array(image)
@@ -37,8 +34,11 @@ else:
    st.write('Please Upload an image.')
 
 if st.button('Sort Image'):
-  classifier = sort_waste(uploaded_image)
-  if classifier == 1:
-    st.text('The waste is Recyclable')
-  else:
-    st.text('The waste is Organic')
+  try:
+    classifier = sort_waste(uploaded_image)
+    if classifier == 1:
+      st.text('The waste is Recyclable')
+    else:
+      st.text('The waste is Organic')
+  except:
+    print('Please upload the right image format.')
